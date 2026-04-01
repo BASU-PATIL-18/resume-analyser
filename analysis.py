@@ -5,7 +5,7 @@ from dotenv import load_dotenv # Make sure to install python-dotenv if you haven
 load_dotenv()# Load environment variables from a .env file
 import google.generativeai as genai
 from pdf import extractpdf
-key = os.getenv("google api key")
+key = os.getenv("google_api_key")
 genai.configure(api_key=key)
 model=genai.GenerativeModel("gemini-2.5-flash")
 def analyze_text(pdf_doc,job_description):
